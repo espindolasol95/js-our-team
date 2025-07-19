@@ -36,3 +36,14 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+// recuperare gli elemneti del dom che mi servono 
+
+const teamContainer =
+//definisco una variabile che mi servira per contenere tutte le colonne e le card da innietare nella pagina
+let cards ='';
+//ciclo larray 
+
+for(let i=0; i<teamMembers.length; i++);
+const member = teamMembers [i];
+const {name, role, email, img} = member;
+cards+=
