@@ -69,5 +69,7 @@ cards+= `
   // Inietta le card nella pagina
   teamContainer.innerHTML = cards;
   //bonus:
-
-  
+ // recupero gli elemneti del dom che mi servono 
+  const nameImput= document.getElementById("name");
+  const roleImput=document.getElementById("role");
+  const imageInput=document.getElementById("Image");
