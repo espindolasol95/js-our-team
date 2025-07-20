@@ -36,18 +36,18 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
-// recuperare gli elemneti del dom che mi servono 
-
+ // recuperare gli elemneti del dom che mi servono 
 const teamContainer =document.querySelector(".teamContainer .row");
+//const teamContainer =document.querySelector(".teamContainer .row");
+function generateTeamCards() {
+ //definisco una variabile che mi servira per contenere tutte le colonne e le card da innietare nella pagina
+ let cards ='';
+ //ciclo larray 
 
-//definisco una variabile che mi servira per contenere tutte le colonne e le card da innietare nella pagina
-let cards ='';
-//ciclo larray 
-
-for(let i=0; i<teamMembers.length; i++){
-const member = teamMembers [i];
-const {name, role, email, img} = member;
-cards+= `
+ for(let i=0; i<teamMembers.length; i++){
+ const member = teamMembers [i];
+ const {name, role, email, img} = member;
+ cards+= `
     <div class="col-md-6 col-lg-4 mb-4">
       <div class="card mb-3 bg-dark">
         <div class="row g-0">
@@ -68,6 +68,7 @@ cards+= `
 
   // Inietta le card nella pagina
   teamContainer.innerHTML = cards;
+}
   //bonus:
  // recupero gli elemneti del dom che mi servono 
   const nameInput = document.getElementById("name");
@@ -89,8 +90,12 @@ cards+= `
  //creo un nuovo eggetto con i campi inseriti del form con id "role"
   role: roleInput.value,
  //Prendo il valore del campo input con id "image"
-  image: imageInput.value || "/assets/img/Leo-Messi-PNG.png"
+  image: imageInput.value ||  "img/placeholder.png"
   };
-  teamMembers.push(newMember);
   
+  
+   teamMembers.push(newMember);
+   generateTeamCards();
+
  });
+ 
