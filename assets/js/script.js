@@ -70,6 +70,17 @@ cards+= `
   teamContainer.innerHTML = cards;
   //bonus:
  // recupero gli elemneti del dom che mi servono 
-  const nameImput= document.getElementById("name");
-  const roleImput=document.getElementById("role");
-  const imageInput=document.getElementById("Image");
+  const nameImput = document.getElementById("name");
+  const roleImput = document.getElementById("role");
+  const imageInput = document.getElementById("Image");
+
+ //recupero elemento  button
+ const form = document.querySelector("form")
+ // Aggiungo un ascoltatore di eventi sul form per gestire il "submit"
+ form.addEventListener("submit", function (event){
+  // Impediamo il comportamento di default del form cioè il refresh de la pag.
+ event.preventDefault();
+
+
+
+ });
