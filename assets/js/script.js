@@ -70,10 +70,10 @@ cards+= `
   teamContainer.innerHTML = cards;
   //bonus:
  // recupero gli elemneti del dom che mi servono 
-  const nameImput = document.getElementById("name");
-  const roleImput = document.getElementById("role");
-  const imageInput = document.getElementById("Image");
-
+  const nameInput = document.getElementById("name");
+  const roleInput = document.getElementById("role");
+  const imageInput = document.getElementById("image");
+  
  //recupero elemento  button
  const form = document.querySelector("form")
  // Aggiungo un ascoltatore di eventi sul form per gestire il "submit"
@@ -82,5 +82,15 @@ cards+= `
  event.preventDefault();
 
 
-
+  const newMember={
+ //creo un nuovo eggetto con i campi inseriti del form con id "name"
+  
+  name: nameInput.value,
+ //creo un nuovo eggetto con i campi inseriti del form con id "role"
+  role: roleInput.value,
+ //Prendo il valore del campo input con id "image"
+  image: imageInput.value || "/assets/img/Leo-Messi-PNG.png"
+  };
+  teamMembers.push(newMember);
+  
  });
